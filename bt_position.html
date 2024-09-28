@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        ul{
+            /*cố định 1 vị trí khi kéo xuống ->sticky*/
+            position: sticky;
+            left: 0;
+            top: 0;
+            z-index: 9999;
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            background-color: #E25300;
+            border-radius: 10px;
+        }
+        li{
+            color: white;
+            margin: 5px;
+            padding: 10px;
+        }
+        .box-cha{
+            margin-top: 50px;
+            margin-bottom: 30px;
+            width: 100%;
+            height: 1000px;
+            background-color: #CCCCCC;
+            border-radius: 10px;
+            position: relative;
+        }
+        .box-con{
+            border-radius: 10px;
+            width: 100px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+        }
+        .box-con:nth-child(1){
+            position: absolute;
+            background-color: #E25300;
+        }
+        .box-con:nth-child(3){
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background-color: #369400;
+
+        }
+        .box-con:nth-child(2){
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #D40000;
+
+        }
+        .box-con:nth-child(4){
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            background-color: #2A00D4;
+
+        }
+        .content::before{
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #0606062d;
+        }
+        .content{
+            background-color: #0065BC;
+            color: white;
+            border-radius: 10px;
+            padding: 80px 50px ;
+            position: relative;
+            overflow: hidden;
+        }
+        .content::after{
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            background: #0606062d;
+        }
+        .inner-content{
+            position: relative;
+            z-index: 1;
+        }
+        .inner-content:first-letter{
+            font-size: 50px;
+        }
+        .inner-content::first-line{
+            text-transform: uppercase;
+        }
+        .call {
+            /*cố định 1 vị trí*/
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #147A00;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            font-size: 30px;
+            z-index: 9999;
+        }
+
+    </style>
+    <h2>Bài tập về position</h2>
+    <p><b>Yêu cầu</b>: Code các box như dưới đây. Chú ý có bo góc cho các element</p>
+    <ul>
+        <li><b>Trang chủ</b></li>
+        <li><b>Giới thiệu</b></li>
+        <li><b>Sản phẩm</b></li>
+        <li><b>Tin tức</b></li>
+        <li><b>Liên hệ</b></li>
+    </ul>
+    <div class="box-cha">
+        <div class="box-con">1</div>
+        <div class="box-con">2</div>
+        <div class="box-con">3</div>
+        <div class="box-con">4</div>
+    </div>
+    <div class="content">
+        <div class="inner-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, voluptates? Nisi debitis nulla, autem, impedit consequuntur cum adipisci eveniet, in numquam sed corrupti. Molestiae tenetur possimus perferendis repellendus excepturi saepe. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, voluptates? Nisi debitis nulla, autem, impedit consequuntur cum adipisci eveniet, in numquam sed corrupti. Molestiae tenetur possimus perferendis repellendus excepturi saepe. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, voluptates? Nisi debitis nulla, autem, impedit consequuntur cum adipisci eveniet, in numquam sed corrupti. Molestiae tenetur possimus perferendis repellendus excepturi saepe. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, voluptates? Nisi debitis nulla, autem, impedit consequuntur cum adipisci eveniet, in numquam sed corrupti. Molestiae tenetur possimus perferendis repellendus excepturi saepe. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, voluptates? Nisi debitis nulla, autem, impedit consequuntur cum adipisci eveniet, in numquam sed corrupti. Molestiae tenetur possimus perferendis repellendus excepturi saepe. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, voluptates? Nisi debitis nulla, autem, impedit consequuntur cum adipisci eveniet, in numquam sed corrupti. Molestiae tenetur possimus perferendis repellendus excepturi saepe.
+        </div>
+    </div>
+    <div class="call">
+        <!--thẻ a chứa icon -> display:inline-block-->
+        <a href="tel:0123456789">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </div>
+</body>
+</html>
